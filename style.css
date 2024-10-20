@@ -1,0 +1,304 @@
+* {
+    /* Ensuring proper padding */
+    box-sizing: border-box;
+}
+
+html {
+    /* Set a consistent font across the website */
+    font-family: "Lucida Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+.header {
+    background-color: darkgrey;
+    color: rgb(15, 15, 15);
+    padding: 15px;
+    text-align: center;
+}
+
+/* Base layout using CSS grid */
+.container {
+    display: grid;
+    /* Single column layout for mobile devices */
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 15px;
+}
+
+/* Navigation menu styling */
+.menu {
+    background-color: darkslateblue;
+    padding: 15px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: darkgray;
+    color: white;
+    text-align: center;
+    box-shadow: 0 1px 3px lightgray, grey;
+    border-radius: 3px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu li a:hover {
+    background-color: darkslateblue;
+    border-radius: 3px;
+}
+
+/* Main content section styling */
+.main {
+    background-color: rgb(248, 248, 248);
+    padding: 15px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #757575;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"] { 
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    font-size:16px;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus {
+    border-color: purple;
+    outline: none;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #3700b3;
+}
+
+/* Right sidebar styling */
+.aside {
+    background-color: darkslateblue;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px lightgray, grey;
+}
+
+/* Footer section styling */
+.footer {
+    background-color: darkgrey;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 11px;
+}
+
+/* Image responsiveness */
+.responsive-img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    border-radius: 10px;
+    aspect-ratio: 3 / 4;
+}
+
+/* Media query for larger screen sizes (min-width: 700px) */
+@media only screen and (min-width: 700px) {
+    .container {
+        /* Three-column layout for larger screens */
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    .responsive-img {
+        max-width: 680px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.contact-info {
+    margin: 2em 0;
+}
+
+.contact-info a {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.link-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.link-list li {
+    margin: 0.5em 0;
+}
+
+.registration-form {
+    background-color: #ccc;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.registration-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group.button-group {
+    display: flex;
+    justify-content: center;
+}
+
+.form-group button {
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 150px;
+}
+
+.form-group button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 400px) {
+    .registration-form {
+        width: 90%;
+    }
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.photo-grid {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0; /* Jarak antar baris */
+}
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 0 5px; /* Jarak antar foto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
+}
+
+.registration-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+.registration-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-group.button-group {
+    display: flex;
+    justify-content: center;
+}
+.form-group button {
+    padding: 10px;
+    background-color: #2890a7;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 150px; /* Membatasi lebar tombol */
+}
+.form-group button:hover {
+    background-color: #21788d;
+}
